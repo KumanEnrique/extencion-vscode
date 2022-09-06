@@ -12,9 +12,16 @@ function activate(context) {
 	const commands = [
 		vscode.commands.registerCommand('my-first-extension.helloWorld',helloWorld),
 		vscode.commands.registerCommand('my-first-extension.repetirtexto',repetirTexto),
-		vscode.commands.registerCommand('my-first-extension.crearCarpetas',folderStruct)
+		vscode.commands.registerCommand('my-first-extension.folderStruct',folderStruct)
 	]
 	context.subscriptions.push(...commands);
+	// const disposable = vscode.commands.registerCommand(
+	// 	'my-first-extension.testCarpet',
+	// 	()=>{
+	// 		return testFolder(context);
+	// 	}
+	// )
+	// context.subscriptions.push(disposable);
 	
 
 }

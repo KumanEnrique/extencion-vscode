@@ -15,7 +15,7 @@
     "onCommand:my-first-extension.repetirtexto",
     "onCommand:my-first-extension.folderStruct"
   ],
-  "main": "./extension.js",
+  "main": "./src/extension.js",
   "contributes": {
     "commands": [
       {
@@ -28,9 +28,17 @@
       },
       {
         "command": "my-first-extension.folderStruct",
-        "title": "crea una estructura de carpetas"
+        "title": "estructura propia MVC php"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "my-first-extension.folderStruct",
+          "group": "estructura propia MVC php"
+        }
+      ]
+    }
   },
   "scripts": {
     "lint": "eslint .",
