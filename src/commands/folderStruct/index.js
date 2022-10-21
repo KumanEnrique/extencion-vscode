@@ -3,9 +3,10 @@
 const vscode = require('vscode');
 const fs = require('fs')
 const path = require('path')
-module.exports = async function () {
+module.exports = async function (res) {
     const userFolder = await vscode.window.showInputBox({placeHolder:"coloca tu nombre de carpeta raiz"})
-    const userPath = await vscode.window.showInputBox({placeHolder:"copia y pega la direccion raiz"})
+    // const userPath = await vscode.window.showInputBox({placeHolder:"copia y pega la direccion raiz"})
+    const userPath = res.fsPath
     if(!userFolder){
         vscode.window.showErrorMessage('El nombre es requerido')
         return

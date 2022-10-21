@@ -2,6 +2,7 @@ const vscode = require('vscode');
 const helloWorld = require('./commands/helloWorld/index')
 const repetirTexto = require('./commands/repetirTexto/index')
 const folderStruct = require('./commands/folderStruct/index')
+const fs = require('fs')
 /**
  * @param {vscode.ExtensionContext} context
  */
@@ -22,8 +23,14 @@ function activate(context) {
 	// 	}
 	// )
 	// context.subscriptions.push(disposable);
-	
-
+	let disposable = vscode.commands.registerCommand('my-first-extension.mvvmFolderGenerate', (res) => {
+		console.log(res.fsPath)
+		vscode.window.showInformationMessage(res.fsPath);
+		fs.mkdirSync(res.fsPath + '/model')
+		fs.mkdirSync(res.fsPath + '/modelview')
+		fs.mkdirSync(res.fsPath + '/view')
+	});
+	context.subscriptions.push(disposable);
 }
 
 // this method is called when your extension is deactivated
