@@ -11,7 +11,7 @@ module.exports = async function () {
         const selection = editor.selection;
         const arreglo = []
         for(let i = 0;i < repeticiones;i++){
-            arreglo.push(`${userText}${i}`)
+            arreglo.push(`"${userText}$${i}"`)
         }
         const arreglo2 = arreglo.join()
         editor.edit(editBuilder => {

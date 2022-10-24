@@ -11,41 +11,36 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:my-first-extension.helloWorld",
     "onCommand:my-first-extension.repetirtexto",
-    "onCommand:my-first-extension.folderStruct",
-    "onCommand:my-first-extension.mvvmFolderGenerate"
+    "onCommand:my-first-extension.folders",
+    "onCommand:my-first-extension.folderStruct"
   ],
   "main": "./src/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "my-first-extension.helloWorld",
-        "title": "Hello World"
-      },
-      {
         "command": "my-first-extension.repetirtexto",
         "title": "Repetir texto"
       },
       {
-        "command": "my-first-extension.folderStruct",
-        "title": "estructura propia MVC php"
+        "command": "my-first-extension.folders",
+        "title": "Creador de carpetas ✔️​"
       },
       {
-				"command": "my-first-extension.mvvmFolderGenerate",
-				"title": "[normal] MVVM Folder Generate"
-			}
+        "command": "my-first-extension.folderStruct",
+        "title": "Creador de estructura de carpetas ✔️"
+      }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "my-first-extension.folderStruct",
-          "group": "estructura propia MVC php"
+          "command": "my-first-extension.folders",
+          "group": "Creador de carpetas ✔️​"
         },
         {
-					"group": "2_workspace",
-					"command": "my-first-extension.mvvmFolderGenerate"
-				}
+          "command": "my-first-extension.folderStruct",
+          "group": "Creador de carpetas ✔️​"
+        }
       ]
     }
   },
