@@ -25,7 +25,7 @@ module.exports = async function () {
             console.log("dentro del if 2")
             const textoUsuario2 = textoUsuario.slice()
             const regex2 = /\$+/g
-            await ENTRE(editor,textoUsuario2,rep,regex2)
+            await ENTRE(editor,textoUsuario2,rep,regex2);
             console.log("dentro del if 2")
         }
         console.log("fuera del if")

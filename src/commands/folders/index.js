@@ -41,7 +41,14 @@ module.exports = async function (res) {
         fs.mkdirSync(`${userPath}/${element}`)
     })
     vscode.window.showInformationMessage(`creado con exito!!! en la carpeta raiz`)
-    
-    getDirectoriesRecursive(directoryPath)
-    vscode.window.showQuickPick(folders,{placeHolder:'pick one'})
+
+    // if(!userFolder){
+    //     vscode.window.showErrorMessage('El nombre es requerido')
+    //     return
+    // }
+    // const dir = path.join(userPath,userFolder);
+    // if(fs.existsSync(dir)){
+    //     vscode.window.showErrorMessage('no se puede continuar porque la carpeta existe')
+    //     return;
+    // }
 }
